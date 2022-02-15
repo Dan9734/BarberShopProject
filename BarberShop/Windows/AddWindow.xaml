@@ -1,0 +1,304 @@
+﻿<Window x:Class="BarberShop.Windows.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BarberShop.Windows"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowState="Maximized"
+        Title="AddWindow" Height="1080" Width="1920" Background="SlateGray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+       
+        <TextBlock
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+                Text="Добавление персонала"
+                FontSize="70"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="10" 
+                Foreground="OrangeRed"
+                />
+        <TextBlock 
+            Grid.Row="1"
+            Grid.Column="0"
+            Text="Имя:"
+            FontSize="60"
+            Foreground="OrangeRed"
+            HorizontalAlignment="Right"
+            Margin="0 0 10 0"
+            />
+        <TextBlock 
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Фамилия:"
+            FontSize="60"
+            Foreground="OrangeRed"
+            HorizontalAlignment="Right"
+            Margin="0 0 10 0"
+            />
+        <TextBlock 
+            Grid.Row="3"
+            Grid.Column="0"
+            Text="Номер телефона:"
+            FontSize="60"
+            Foreground="OrangeRed"
+            HorizontalAlignment="Right"
+            Margin="0 0 10 0"
+            />
+        <TextBlock 
+            Grid.Row="4"
+            Grid.Column="0"
+            Text="Номер паспорта:"
+            FontSize="60"
+            Foreground="OrangeRed"
+            HorizontalAlignment="Right"
+            Margin="0 0 10 0"
+            />
+        <TextBlock 
+            Grid.Row="5"
+            Grid.Column="0"
+            Text="Серия паспорта:"
+            FontSize="60"
+            Foreground="OrangeRed"
+            HorizontalAlignment="Right"
+            Margin="0 0 10 0"
+            />
+        <TextBlock 
+            Grid.Row="6"
+            Grid.Column="0"
+            Text="Пол:"
+            FontSize="60"
+            Foreground="OrangeRed"
+            HorizontalAlignment="Right"
+            Margin="0 0 10 0"
+            />
+        <TextBlock 
+            Grid.Row="7"
+            Grid.Column="0"
+            Text="Спецальность:"
+            FontSize="60"
+            Foreground="OrangeRed"
+            HorizontalAlignment="Right"
+            Margin="0 0 10 0"
+            />
+        <TextBlock 
+            Grid.Row="8"
+            Grid.Column="0"
+            Text="Стаж:"
+            FontSize="60"
+            Foreground="OrangeRed"
+            HorizontalAlignment="Right"
+            Margin="0 0 10 0"
+            />
+
+        <TextBox
+             x:Name="Fname"
+             Grid.Row="1"
+             Grid.Column="1"
+            Margin="10 0 0 0"
+            Width="400"
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="60" 
+            Background="{x:Null}" 
+            Foreground="Black" 
+            BorderBrush="OrangeRed"
+            TextChanged="Fname_TextChanged"
+            PreviewKeyDown="Fname_PreviewKeyDown"
+             />
+        <TextBox
+             x:Name="Lname"
+             Grid.Row="2"
+             Grid.Column="1"
+            Margin="10 0 0 0"
+            Width="400"
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="60" 
+            Background="{x:Null}" 
+            Foreground="Black" 
+            BorderBrush="OrangeRed"
+            TextChanged="Lname_TextChanged"
+            PreviewKeyDown="Lname_PreviewKeyDown" 
+            Height="93" 
+            VerticalAlignment="Top"  
+             />
+        <TextBox
+             x:Name="Phone"
+             Grid.Row="3"
+             Grid.Column="1"
+            Margin="10 0 0 0"
+            Width="400"
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="60" 
+            MaxLength="12"
+            Background="{x:Null}" 
+            Foreground="Black" 
+            BorderBrush="OrangeRed"
+            TextChanged="Phone_TextChanged"
+            PreviewKeyDown="Phone_PreviewKeyDown"
+            GotFocus="Phone_GotFocus"
+             />
+        <TextBox
+             x:Name="NumberPas"
+             Grid.Row="4"
+             Grid.Column="1"
+            Margin="10 0 0 0"
+            Width="400"
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="60" 
+            MaxLength="6"
+            Background="{x:Null}" 
+            Foreground="Black" 
+            BorderBrush="OrangeRed"
+            TextChanged="NumberPas_TextChanged"
+            PreviewKeyDown="NumberPas_PreviewKeyDown"
+             />
+        <TextBox
+             x:Name="SeriaPas"
+             Grid.Row="5"
+             Grid.Column="1"
+            Margin="10 0 0 0"
+            Width="400"
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="60" 
+            MaxLength="4"
+            Background="{x:Null}" 
+            Foreground="Black" 
+            BorderBrush="OrangeRed"
+            TextChanged="SeriaPas_TextChanged"
+            PreviewKeyDown="SeriaPas_PreviewKeyDown"
+             />
+        <TextBox
+             x:Name="Experience"
+             Grid.Row="8"
+             Grid.Column="1"
+            Margin="10 0 0 0"
+            Width="400"
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="60" 
+            MaxLength="2"
+            Background="{x:Null}" 
+            Foreground="Black" 
+            BorderBrush="OrangeRed"
+            TextChanged="Experience_TextChanged"
+            PreviewKeyDown="Experience_PreviewKeyDown"
+             />
+        <ComboBox
+            x:Name="Gender"
+            Grid.Column="1"
+            Grid.Row="6"
+            Margin="10 0 0 0"
+            Width="400"
+            FontSize="30"
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            >
+            <ComboBox.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </ComboBox.OpacityMask>
+        </ComboBox>
+        <ComboBox
+            x:Name="Pecialization"
+            Grid.Column="1"
+            Grid.Row="7"
+            Margin="10 0 0 0"
+            Width="400"
+            FontSize="30"
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            >
+                <ComboBox.OpacityMask>
+                    <SolidColorBrush Color="Black" Opacity="0.5"/>
+                </ComboBox.OpacityMask>
+            </ComboBox>
+            <Button
+            Grid.Row="0"
+            Grid.Column="2"
+                x:Name="Close"
+                Height="50"
+                Width="50"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="20"
+                Click="Close_Click" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"  
+                Style="{StaticResource MyButtonStyle}"
+                >
+            <Button.Background>
+                <ImageBrush ImageSource="/Images/cross.png"/>
+            </Button.Background>
+        </Button>
+        <Button
+            Grid.Row="9"
+            Grid.Column="1"
+                x:Name="Add"
+                Content="Добавить"
+                Height="90"
+                Width="300"
+                FontSize="55" 
+                Margin="10"
+                VerticalAlignment="Center"
+                Click="Add_Click"
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                />
+        <Button
+            Grid.Row="9"
+            Grid.Column="1"
+                x:Name="Change"
+                Content="Изменить"
+                Height="90"
+                Width="300"
+                FontSize="55" 
+                Margin="10"
+                VerticalAlignment="Center"
+                Click="Change_Click"
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                />
+        <Button
+            Grid.Row="9"
+            Grid.Column="0"
+                x:Name="Exit"
+                Content="Назaд"
+                Height="90"
+                Width="300"
+                FontSize="55" 
+                Margin="10"
+                VerticalAlignment="Center"
+                Click="Exit_Click"
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                />
+    </Grid>
+</Window>
